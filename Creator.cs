@@ -5,7 +5,7 @@ using System;
 
 public class Creator
 {
-    public static string Login()
+    public static string emailaddress()
     {
 
         string message = "";
@@ -22,7 +22,7 @@ public class Creator
             Thread.Sleep(1000);
            
             // odabrati opciju registracije kao Creator
-            var JoinAsCreator = Driver.Instance.FindElement(By.XPath("//*[@id=\"root\"]//div[2]/div[1]/div[1]/a")); 
+            var JoinAsCreator = Driver.Instance.FindElement(By.XPath("//*[@id=\"root\"]//div[2]/div[1]/a/button")); 
             JoinAsCreator.Click();
             
             // registrovati se pute emaila
@@ -61,6 +61,16 @@ public class Creator
 
 
 
+    }
+
+    internal static string emailaddress()
+    {
+        throw new NotImplementedException();
+    }
+
+    internal static string Registration()
+    {
+        throw new NotImplementedException();
     }
 }
 

@@ -37,24 +37,26 @@ namespace _4Fans
 
             OpenUrl.GoTo(URL);
 
-            string CreatorMessage = Creator.Login();
+            string CreatorMessage = Creator.emailaddress();
+          
+            string FanMessage = Fan.googleaccount();
 
 
 
 
 
-        if (!CreatorMessage.Contains("ERROR"))
+            if (!CreatorMessage.Contains("ERROR") & (!FanMessage.Contains("ERORR")))
 
         {
             subject = "Passed!!! " + subject;
-            body = "Test je prošao" + "\n" + CreatorMessage;
+            body = "Test je prošao" + "\n" + CreatorMessage + FanMessage;  
         }
         
         else
         
         {
             subject = "Failed!!! " + subject;
-            body = CreatorMessage;
+            body = CreatorMessage + FanMessage;
         }
 
 
